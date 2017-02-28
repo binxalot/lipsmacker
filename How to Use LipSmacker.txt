@@ -1,13 +1,14 @@
-I wanted a way to use Adobe Character Animator’s lip syncing to audio clip functionality with 3ds max 
+I wanted a way to use Adobe Character Animatorâ€™s lip syncing to audio clip functionality with 3ds max 
 morpher modifier, which is generally used to create facial animations in 3ds max.
 You need two pieces of separate, very expensive, software to use this tool.  First is Adobe Character 
 Animator.  The second is 3ds Max from Autodesk.  
 How to use this, step by step:
 1.	Load Adobe Character Animator
-2.	Go to FILE > Import > Select the basic shape head puppet 
+2.	Go to FILE > Import > Select the basic shape head puppet PSD file you downloaded here.
 3.	Drag the puppet to your scene.
-4.	Set the Scene to be 400x400 pixels at 30FPS
-5.	Go to File > Import > Select your audio clip and import to your scene timeline
+4.	Set the Scene to be 400x400 pixels at 30FPS at whatever length you need it to be.
+5.	Go to File > Import > Select your audio clip and import to your scene timeline in Character Animator.
+5a. Make sure to click the record button for Lip Sync so Character animator will record the mouth frames.
 6.	Select the puppet layer go to TimeLine > Compute Lip Sync from Scene Audio
 7.	Export your clip to a png sequence.
 The sequence that gets exported will be a series of gray blocks with different colored rectangles in place 
@@ -16,15 +17,18 @@ Now open Lipsmacker
 1.	Select the folder of the png sequence you just exported by going to FILE > Load PNG 
 Sequence
 2.	Now adjust your strength values for the morpher, and adjust your channel numbers to 
-match up with your model’s morpher channels in 3ds Max
+match up with your modelâ€™s morpher channels in 3ds Max
 3.	Name your mesh then adjust the FPS and Keyframing. The Hang Back Keyframe is the 
 number of frames to place a 0 value keyframe before the shooting up to the morpher 
 strength level.  Use this to add more or less inbetweening for the morph target values. 
 4.	Now Export to Max Script, the utility will then go through each png, and keyframe the 
 morphers to match up with the colors it detects and output a maxscript file for use in 3ds 
 Max. 
-5.	In 3dMax go to Utilities, and then select Run Max Script. Select the script file you just output 
+Now Open 3ds Max
+1. Setup your character's morph targets to reflect the phenome range you make in character animator. There are 14 by default.
+2.	In 3dMax go to Utilities, and then select Run Max Script. Select the script file you just output 
 from Lipsmacker and it will automatically put in keyframes for your morpher.
+3. Make adjustments as needed.
 
-
-  
+Enjoy,
+Binxalot @ chickywicky.com
